@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>까미노메이트 - 여행사 소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="까미노메이트 여행사 소개" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- 서브 공통 --- */
+    .sub-hero {
+      position: relative;
+      width: 100%;
+      min-height: 260px;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .sub-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+    }
+    .sub-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .sub-hero-title {
+      font-size: 34px;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+    .sub-hero-sub {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .sub-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* 좌측 사이드 메뉴 */
+    .sub-sidenav {
+      border-top: 2px solid #0c3b32;
+    }
+    .sub-sidenav-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 18px;
+      padding-top: 10px;
+    }
+    .sub-sidenav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #e5e5e5;
+    }
+    .sub-sidenav li {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .sub-sidenav a {
+      display: block;
+      padding: 12px 4px;
+      font-size: 15px;
+      color: #555;
+    }
+    .sub-sidenav a:hover {
+      color: #0c3b32;
+    }
+    .sub-sidenav a.active {
+      color: #0c3b32;
+      font-weight: 600;
+    }
+
+    /* 우측 콘텐츠 */
+    .sub-breadcrumb {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .sub-breadcrumb span + span::before {
+      content: ">";
+      margin: 0 6px;
+      color: #bbb;
+    }
+    .sub-main-title {
+      font-size: 26px;
+      margin: 0 0 28px;
+      font-weight: 700;
+    }
+
+    .sub-section {
+      margin-bottom: 50px;
+    }
+
+    .sub-section-title {
+      font-size: 22px;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    .sub-section-sub {
+      font-size: 15px;
+      color: #777;
+      margin: 0 0 20px;
+    }
+    .sub-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+      margin: 6px 0;
+    }
+
+    /* 2열 레이아웃 */
+    .sub-two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .sub-img-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+      background: #000;
+    }
+    .sub-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 회색 영역 */
+    .sub-box-gray {
+      background: #f7f7f7;
+      border-radius: 24px;
+      padding: 36px 32px;
+      margin-top: 16px;
+    }
+
+    /* 이미지 타일 */
+    .sub-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .sub-gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+    }
+    .sub-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .sub-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 60px;
+      }
+    }
+    @media (max-width: 768px) {
+      .sub-hero-inner {
+        padding: 40px 20px;
+      }
+      .sub-hero-title {
+        font-size: 24px;
+      }
+      .sub-layout {
+        padding: 30px 16px 50px;
+      }
+      .sub-two-col {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .sub-box-gray {
+        padding: 24px 18px;
+      }
+      .sub-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- HEADER (메인에서 쓰던 것 그대로 복붙) -->
+  <header2 id="header2">
+    <div class="h-top">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="까미노메이트 로고">
+        </a>
+      </h1>
+
+      <div class="header2-right">
+        <ul class="link-box">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+        <button class="all-menu-btn" type="button">☰</button>
+      </div>
+    </div>
+    
+    <nav class="gnb">
+      <ul class="gnb-list">
+        <li class="gnb-item">
+          <a href="#">회사소개</a>
+          <ul class="sub-menu">
+            <li><a href="about.html">여행사 소개</a></li>
+            <li><a href="guides.html">인솔자 소개</a></li>
+            <li><a href="location.html">찾아오시는 길</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">여행상품</a>
+          <ul class="sub-menu">            
+            <li><a href="#">전체 보기</a></li>
+            <li><a href="#">자유일정 플랜 메이트</a></li>
+            <li><a href="#">프랑스길</a></li>
+            <li><a href="#">북쪽길</a></li>  
+            <li><a href="#">포르투갈길</a></li>
+            <li><a href="#">은의길</a></li>
+          </ul>
+        </li>        
+        <li class="gnb-item">
+          <a href="#">오프라인 설명회</a>
+          <ul class="sub-menu">
+            <li><a href="#">신청하기</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">커뮤니티</a>
+          <ul class="sub-menu">
+            <li><a href="#">여행후기</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">고객센터</a>
+          <ul class="sub-menu">
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">1:1 문의</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header2>
+
+
+  <!-- MAIN -->
+  <main id="content">
+    <div class="sub-layout">
+
+      <!-- 왼쪽 사이드 메뉴 -->
+      <aside class="sub-sidenav">
+        <h3 class="sub-sidenav-title">까미노메이트</h3>
+        <ul>
+          <li><a href="about.html" class="active">여행사 소개</a></li>
+          <li><a href="guides.html">인솔자 소개</a></li>
+          <li><a href="location.html">찾아오시는 길</a></li>
+        </ul>
+      </aside>
+
+      <!-- 오른쪽 본문 -->
+      <section class="sub-content">
+        <div class="sub-breadcrumb">
+          <span>Home</span><span>까미노메이트</span><span>여행사 소개</span>
+        </div>
+        <h1 class="sub-main-title">여행사 소개</h1>
+
+        <!-- 인트로 -->
+        <div class="sub-section" style="text-align:center;">
+          <p style="font-size:30px; margin-bottom:10px;"><strong>Buen Camino!</strong></p>
+          <p>
+            까미노메이트는 최근 몇 년간 수많은 순례자들의 발걸음을 함께하며,<br>
+            각자의 이야기와 속도에 맞춘 산티아고 순례길을 설계해 온 순례길 전문 동행 여행사입니다.
+          </p>
+        </div>
+
+        <!-- 2열 : 사진 + 스토리 -->
+        <div class="sub-section sub-two-col">
+          <div>
+            <h2 class="sub-section-title">순례길 여정을, 조금 더 따뜻하고 안전하게</h2>
+            <p class="sub-section-sub">직접 걸어본 경험에서 시작된 까미노메이트</p>
+            <p>
+              산티아고 순례길은 참 아름답지만, 결코 가볍지만은 않은 여정입니다.<br>
+              하루하루 걷는 거리, 숙소와 식사, 짐과 컨디션까지 예상치 못한 변수들이 이어집니다.
+            </p>
+            <p>
+              여러 차례 길 위에 서 보니, ‘누군가 곁에서 현실적인 부분을 함께 고민해 준다면 얼마나 든든할까?’
+              라는 생각이 자연스럽게 들었습니다.
+            </p>
+            <p>
+              그렇게 탄생한 것이 까미노메이트입니다.<br>
+              걷는 이가 오롯이 자신의 시간에 집중할 수 있도록, 보이지 않는 부분을 미리 준비하고
+              옆에서 조용히 챙겨주는 동행이 되고자 합니다.
+            </p>
+          </div>
+          <div class="sub-img-card">
+            <img src="images/about-office-1.jpg" alt="까미노메이트 사무실 및 순례길 이미지">
+          </div>
+        </div>
+
+        <!-- 회색박스 : 우리가 하는 일 -->
+        <div class="sub-section">
+          <div class="sub-box-gray">
+            <h2 class="sub-section-title" style="text-align:center;">산티아고 순례길에만 집중하는 여행사</h2>
+            <p style="text-align:center; margin-bottom:24px;">
+              우리는 “모든 여행”이 아니라, “산티아고 순례길”이라는 한 가지에 집중합니다.
+            </p>
+            <p>
+              숙소 예약, 이동 동선, 짐 배송, 난이도에 맞는 일자별 코스 구성까지<br>
+              길 위에서 가장 부담이 되는 부분을 먼저 설계함으로써,
+              순례자는 걷는 시간과 나 자신에게 더 많은 에너지를 쓸 수 있도록 돕습니다.
+            </p>
+            <p>
+              작은 변수에도 쉽게 흔들리지 않도록, 시즌별·코스별 데이터를 축적하고<br>
+              실제 인솔 경험을 바탕으로 안전한 루트를 제안합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 사진 갤러리 -->
+        <div class="sub-section">
+          <h2 class="sub-section-title" style="text-align:center;">까미노메이트의 일상 한 장면</h2>
+          <p style="text-align:center;">
+            준비 모임, 설명회, 길 위의 순간들까지<br>
+            까미노메이트가 함께 걸어온 발자국을 사진으로 담았습니다.
+          </p>
+          <div class="sub-gallery-grid">
+            <div class="sub-gallery-item">
+              <img src="images/about-gallery-1.jpg" alt="설명회 현장 사진">
+            </div>
+            <div class="sub-gallery-item">
+              <img src="images/about-gallery-2.jpg" alt="순례길 풍경">
+            </div>
+            <div class="sub-gallery-item">
+              <img src="images/about-gallery-3.jpg" alt="함께 걷는 순례자들">
+            </div>
+            <div class="sub-gallery-item">
+              <img src="images/about-gallery-4.jpg" alt="완주 인증 및 기념 사진">
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER (메인에서 쓰던 푸터 그대로 복붙) -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <ul class="sns-list">
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+            <li><a href="#" aria-label="YouTube">YT</a></li>
+            <li><a href="#" aria-label="Blog">B</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-center">
+          <strong>까미노메이트 (Camino Mate)</strong>
+          <p>
+            대표자 : 홍길동  &nbsp;&nbsp;  사업자번호 : 000-00-00000<br/>
+            주소 : 서울특별시 ○○구 ○○로 00, 0층<br/>
+            전화 : 02-000-0000  &nbsp;&nbsp;  Email : help@caminomate.com
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <p class="copy">
+            Copyright ⓒ CAMINO MATE. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

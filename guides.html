@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>까미노메이트 - 인솔자 소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 여기서는 about.html과 거의 동일한 서브 레이아웃을 재사용 */
+    .sub-hero { position:relative;width:100%;min-height:260px;background-size:cover;background-position:center center;display:flex;align-items:center;color:#fff;}
+    .sub-hero::before {content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.55),rgba(0,0,0,0.15));}
+    .sub-hero-inner {position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:60px 24px;}
+    .sub-hero-title {font-size:34px;margin:0 0 8px;font-weight:700;}
+    .sub-hero-sub {font-size:16px;opacity:0.9;}
+
+    .sub-layout {display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;max-width:1400px;margin:0 auto;padding:60px 24px 100px;}
+    .sub-sidenav {border-top:2px solid #0c3b32;}
+    .sub-sidenav-title {font-size:18px;font-weight:700;margin:0 0 18px;padding-top:10px;}
+    .sub-sidenav ul {list-style:none;padding:0;margin:0;border-top:1px solid #e5e5e5;}
+    .sub-sidenav li {border-bottom:1px solid #e5e5e5;}
+    .sub-sidenav a {display:block;padding:12px 4px;font-size:15px;color:#555;}
+    .sub-sidenav a:hover {color:#0c3b32;}
+    .sub-sidenav a.active {color:#0c3b32;font-weight:600;}
+
+    .sub-breadcrumb {font-size:13px;color:#888;margin-bottom:10px;}
+    .sub-breadcrumb span+span::before {content:">";margin:0 6px;color:#bbb;}
+    .sub-main-title {font-size:26px;margin:0 0 28px;font-weight:700;}
+
+    .guide-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;}
+    .guide-card {display:grid;grid-template-columns:160px minmax(0,1fr);gap:18px;align-items:flex-start;padding:22px 20px;border-radius:20px;background:#f7faf9;}
+    .guide-photo {width:160px;height:160px;border-radius:18px;overflow:hidden;background:#000;}
+    .guide-photo img {width:100%;height:100%;object-fit:cover;display:block;}
+    .guide-name {font-size:20px;margin:0 0 6px;font-weight:700;}
+    .guide-role {font-size:14px;color:#777;margin:0 0 10px;}
+    .guide-text {font-size:15px;color:#444;line-height:1.8;margin:4px 0;}
+
+    @media (max-width:1024px){
+      .sub-layout{grid-template-columns:1fr;padding:40px 20px 70px;}
+      .guide-list{grid-template-columns:1fr;}
+    }
+    @media (max-width:768px){
+      .sub-hero-inner{padding:40px 20px;}
+      .sub-hero-title{font-size:24px;}
+      .sub-layout{padding:30px 16px 50px;}
+      .guide-card{grid-template-columns:1fr;justify-items:flex-start;}
+      .guide-photo{width:140px;height:140px;}
+    }
+  </style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- HEADER (index와 동일) -->
+  <header id="header2">
+    <div class="h-top">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="까미노메이트 로고">
+        </a>
+      </h1>
+
+      <div class="header2-right">
+        <ul class="link-box">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+        <button class="all-menu-btn" type="button">☰</button>
+      </div>
+    </div>
+
+     <nav class="gnb">
+      <ul class="gnb-list">
+        <li class="gnb-item">
+          <a href="#">회사소개</a>
+          <ul class="sub-menu">
+            <li><a href="about.html">여행사 소개</a></li>
+            <li><a href="guides.html">인솔자 소개</a></li>
+            <li><a href="location.html">찾아오시는 길</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">여행상품</a>
+          <ul class="sub-menu">            
+            <li><a href="#">전체 보기</a></li>
+            <li><a href="#">자유일정 플랜 메이트</a></li>
+            <li><a href="#">프랑스길</a></li>
+            <li><a href="#">북쪽길</a></li>  
+            <li><a href="#">포르투갈길</a></li>
+            <li><a href="#">은의길</a></li>
+          </ul>
+        </li>        
+        <li class="gnb-item">
+          <a href="#">오프라인 설명회</a>
+          <ul class="sub-menu">
+            <li><a href="#">신청하기</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">커뮤니티</a>
+          <ul class="sub-menu">
+            <li><a href="#">여행후기</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </li>
+        <li class="gnb-item">
+          <a href="#">고객센터</a>
+          <ul class="sub-menu">
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">1:1 문의</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="content">
+    <div class="sub-layout">
+      <!-- 사이드 -->
+      <aside class="sub-sidenav">
+        <h3 class="sub-sidenav-title">까미노메이트</h3>
+        <ul>
+          <li><a href="about.html">여행사 소개</a></li>
+          <li><a href="guides.html" class="active">인솔자 소개</a></li>
+          <li><a href="location.html">찾아오시는 길</a></li>
+        </ul>
+      </aside>
+
+      <!-- 본문 -->
+      <section>
+        <div class="sub-breadcrumb">
+          <span>Home</span><span>까미노메이트</span><span>인솔자 소개</span>
+        </div>
+        <h1 class="sub-main-title">까미노메이트 인솔자</h1>
+
+        <p style="margin-bottom:28px;font-size:16px;color:#444;line-height:1.8;">
+          까미노메이트의 인솔자는 단순히 ‘길을 아는 사람’이 아니라,<br>
+          낯선 환경과 감정의 변화를 함께 건너는 ‘동행자’라고 생각합니다.
+        </p>
+
+        <div class="guide-list">
+          <!-- 가이드 1 -->
+          <article class="guide-card">
+            <div class="guide-photo">
+              <img src="images/guide-1.jpg" alt="대표 인솔자 사진">
+            </div>
+            <div>
+              <h2 class="guide-name">홍길동</h2>
+              <p class="guide-role">대표 인솔자 · 순례길 전문 코디네이터</p>
+              <p class="guide-text">
+                산티아고 순례길을 여러 차례 완주하며, 계절·코스·컨디션에 따라 다른 루트를 직접 경험했습니다.
+                완주보다 더 중요한 것은 ‘어떤 마음으로 걷는지’라는 믿음으로, 여정 전·중·후의 감정을 함께 나누고자 합니다.
+              </p>
+              <p class="guide-text">
+                처음 걷는 분들을 위해, ‘오늘 꼭 알아야 할 것만 간단하게’ 정리해 드리고,
+                예상치 못한 변수에는 조금 더 차분하게 대응할 수 있도록 옆에서 도와드립니다.
+              </p>
+            </div>
+          </article>
+
+          <!-- 가이드 2 -->
+          <article class="guide-card">
+            <div class="guide-photo">
+              <img src="images/guide-2.jpg" alt="서브 인솔자 사진">
+            </div>
+            <div>
+              <h2 class="guide-name">김다은</h2>
+              <p class="guide-role">서브 인솔자 · 현지 커뮤니케이션 담당</p>
+              <p class="guide-text">
+                스페인어와 영어를 바탕으로, 현지 숙소·식당·교통과의 소통을 맡고 있습니다.
+                언어 때문에 망설였던 분들이 조금 더 가볍게 길 위로 나설 수 있도록 돕고 있습니다.
+              </p>
+              <p class="guide-text">
+                편안한 분위기에서 서로의 속도를 존중하는 팀 문화를 가장 중요하게 생각하며,
+                혼자 떠나도 결코 혼자가 아닌 동행이 되도록 노력하고 있습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <ul class="sns-list">
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+            <li><a href="#" aria-label="YouTube">YT</a></li>
+            <li><a href="#" aria-label="Blog">B</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-center">
+          <strong>까미노메이트 (Camino Mate)</strong>
+          <p>
+            대표자 : 홍길동  &nbsp;&nbsp;  사업자번호 : 000-00-00000<br/>
+            주소 : 서울특별시 ○○구 ○○로 00, 0층<br/>
+            전화 : 02-000-0000  &nbsp;&nbsp;  Email : help@caminomate.com
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <p class="copy">
+            Copyright ⓒ CAMINO MATE. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
