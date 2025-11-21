@@ -29,7 +29,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -74,7 +74,7 @@ img {
   gap: 18px;
   padding: 0;
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .link-box a {
@@ -105,9 +105,9 @@ img {
 .gnb-list {
   display: flex;
   list-style: none;
-  padding: 100 24px;
+  padding: 10px 24px;
   margin: 0;
-  gap: 120px;                /* 메뉴 사이 간격 (원하면 숫자 조절) */
+  gap: -200px;                /* 메뉴 사이 간격 (원하면 숫자 조절) */
 }
 
 .gnb-item {
@@ -116,8 +116,8 @@ img {
 
 .gnb-item > a {
   display: block;
-  padding: 12px 18px;
-  font-size: 22px;
+  padding: 10px 100px 10px;
+  font-size: 20px;
   color: #333;
   font-weight: 500;
 }
@@ -204,7 +204,7 @@ img {
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  max-width: 1800px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -421,12 +421,12 @@ img {
 /* 왼쪽 텍스트 스타일 */
 .about-text strong {
   display: block;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 1.6;
 }
 
 .about-text p {
-  font-size: 23px;
+  font-size: 20px;
   color: #555;
   margin-top: 25px;
 }
@@ -487,8 +487,8 @@ img {
 }
 /* 회사 소개 섹션만 좌우 폭 더 넓게 */
 .about-section .container {
-  max-width: 1600px;   /* 1180 → 1400 정도로 넓게 */
-  padding: 0 32px;     /* 좌우 여백도 살짝 넓혀주기 (원래 16px) */
+  max-width: 1200px;   /* 1180 → 1400 정도로 넓게 */
+  padding: 0 0px;     /* 좌우 여백도 살짝 넓혀주기 (원래 16px) */
 }
 
 /* === 오프라인 설명회 섹션 === */
@@ -498,8 +498,8 @@ img {
 }
 
 .offline-section .container {
-  max-width: 1600px;     /* 회사소개와 비슷하게 넓게 */
-  padding: 0 32px;
+  max-width: 1200px;     /* 회사소개와 비슷하게 넓게 */
+  padding: 0 0px;
 }
 
 .offline-list {
@@ -532,13 +532,13 @@ img {
 
 /* 오른쪽 텍스트 */
 .offline-text {
-  font-size: 23px;
+  font-size: 20px;
   color: #555;
 }
 
 .offline-badge {
   display: inline-block;
-  font-size: 30px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   font-weight: 600;
   color: #0c3b32;
@@ -549,7 +549,7 @@ img {
 }
 
 .offline-title {
-  font-size: 35px;
+  font-size: 30px;
   line-height: 1.6;
   margin: 0 0 18px;
   color: #222;
@@ -562,7 +562,7 @@ img {
 
 .offline-meta {
   margin: 18px 0 26px;
-  font-size: 23px;
+  font-size: 20px;
   color: #666;
 }
 
@@ -597,24 +597,24 @@ img {
 }
 
 .route-section .container {
-  max-width: 1600px;
-  padding: 0 32px 200px;
+  max-width: 1200px;
+  padding: 0 0px 200px;
 }
 
 .route-head {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 
 .route-title {
-  font-size: 35px;
+  font-size: 30px;
   letter-spacing: 0.08em;
   margin: 0 0 12px;
 }
 
 .route-subtitle {
   margin: 0;
-  font-size: 23px;
+  font-size: 20px;
   color: #666;
   line-height: 1.7;
 }
@@ -632,7 +632,7 @@ img {
 
 .route-tab {
   padding: 10px 0;
-  font-size: 23px;
+  font-size: 20px;
   cursor: pointer;
   position: relative;
   color: #777;
@@ -699,12 +699,12 @@ img {
 
 /* 오른쪽 설명 */
 .route-text {
-  font-size: 23px;
+  font-size: 20px;
   color: #444;
 }
 
 .route-course-name {
-  font-size: 23px;
+  font-size: 20px;
   margin: 0 0 16px;
   font-weight: 600;
 }
@@ -749,8 +749,8 @@ img {
   background: #e6e4e4;
 }
 .service-section .container {
-  max-width: 1600px;
-  padding: 0 0px 0px;
+  max-width: 1200px;
+  padding: 0 0px 50px;
 }
 
 .service-head {
@@ -760,14 +760,14 @@ img {
 }
 
 .service-title {
-  font-size: 35px;
+  font-size: 30px;
   line-height: 1.5;
   margin: 0 0 16px;
 }
 
 .service-subtitle {
   margin: 0;
-  font-size: 23px;
+  font-size: 20px;
   color: #555;
   line-height: 1.7;
 }
@@ -797,8 +797,8 @@ img {
 /* 아이콘 동그라미 */
 .service-icon {
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 999px;
   border: 1px solid #d4e4dd;
   display: flex;
@@ -808,20 +808,20 @@ img {
 }
 
 .service-icon img {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
 /* 이모지 쓸 때 */
 .service-icon-symbol {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 /* 텍스트 */
 .service-text h3 {
   margin: 0 0 6px;
-  font-size: 23px;
+  font-size: 20px;
   color: #222;
 }
 
@@ -862,8 +862,8 @@ img {
 }
 
 .bottom-info-section .container {
-  max-width: 1600px;
-  padding: 0 32px 80px;
+  max-width: 1200px;
+  padding: 50 0px 80px;
 }
 
 /* 그리드 레이아웃 : 왼쪽 1, 오른쪽 위/아래 2개 */
